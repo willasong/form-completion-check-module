@@ -1,0 +1,50 @@
+{
+    "name": "Form Completion Check",
+    "description": "Automatically set form competion status. Choose how to identify fields for completion check",
+    "namespace": "FormLogic\\FormCompletionCheck",
+    "framework-version": 12,
+    "authors": [
+        {
+            "name": "Willa Song",
+            "email": "willa.song@surgeons.org",
+            "institution": "Royal Australasian College of Surgeons - RACS"
+        }
+    ],
+    "action-tags": [
+        {
+           "tag": "@COMPLETIONCHECK",
+           "description": "Display of the field with this tag indicate form not completed correctly."
+        }
+     ],
+    "project-settings":[
+        {
+            "key": "descriptive-text",
+            "name": "<B>Fields for completion check are marked by:</B>",
+            "type": "descriptive"
+         },
+        {
+            "key": "fields_by_tag",
+            "name": "&nbsp;&nbsp;&bull;&nbsp;action tag '@COMPLETIONCHECK' (recommended)",
+            "type": "checkbox"            
+        },
+        {
+            "key": "fields_by_name",
+            "name": "&nbsp;&nbsp;&bull;&nbsp;field name starting with defined prefix",
+            "type": "checkbox"
+
+        },
+        {
+            "key": "field_prefix",
+            "name": "&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;Field prefix",
+            "type": "text",
+            "required": true,
+            "default": "dt_check_",
+            "branchingLogic": {
+                "field": "fields_by_name",
+                "value": true
+            }
+        }
+
+    ]
+  
+}
