@@ -1,6 +1,6 @@
 {
     "name": "Form Completion Check",
-    "description": "Automatically set form competion status. Choose how to identify fields for completion check",
+    "description": "Automatically set form completion status based on customised descriptive text fields",
     "namespace": "FormLogic\\FormCompletionCheck",
     "framework-version": 12,
     "authors": [
