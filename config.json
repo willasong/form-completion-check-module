@@ -1,6 +1,6 @@
 {
     "name": "Form Completion Check",
-    "description": "Automatically set form completion status based on customised descriptive text fields",
+    "description": "Automatically set form completion status",
     "namespace": "FormLogic\\FormCompletionCheck",
     "framework-version": 12,
     "authors": [
@@ -19,7 +19,7 @@
     "project-settings":[
         {
             "key": "descriptive-text",
-            "name": "<B>Fields for completion check are marked by:</B>",
+            "name": "Criteria for form completion are to be defined in the REDCap Designer, not on this page. Please refer to the documentation for detailed instructions.<br/><B>Fields for completion check are marked by:</B>",
             "type": "descriptive"
          },
         {
