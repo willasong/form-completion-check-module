@@ -10,11 +10,6 @@ class FormCompletionCheck extends AbstractExternalModule
         $this->form_completion_check($instrument);      
     }
 
-    function redcap_survey_page($project_id, $record, $instrument, $event_id, $group_id, $survey_hash, $response_id, $repeat_instance)
-    {
-        $this->form_completion_check($instrument);
-    }
-
     function form_completion_check(string $instrument): void
     {
         $complete_element_json = json_encode($instrument."_complete");
