@@ -50,7 +50,7 @@ Automatically set the form completion status in REDCap Data Entry Forms (not app
     </p>
 
 ## Compatibility
-This module requires framework 12.0. It has been tested on REDCap 13.8.3.
+This module requires framework 12.0. 
 
 ## Support
 For any issues or questions, please open an issue on this GitHub repository: https://github.com/willasong/form-completion-check-module.
