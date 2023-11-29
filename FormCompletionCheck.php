@@ -143,6 +143,12 @@ class FormCompletionCheck extends AbstractExternalModule
                     {
                         observer.observe(field, observerOptions);
                     });
+
+                    // check complete when user changes the completion status
+                    var complete_elementName = <?php echo $complete_element_json; ?>;
+                    var completeElement = document.querySelector("[name='" + complete_elementName +"']");
+
+                    completeElement.addEventListener('change',completion_check);
                 }
             });
         </script>
