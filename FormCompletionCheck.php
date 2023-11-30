@@ -20,6 +20,13 @@ class FormCompletionCheck extends AbstractExternalModule
         $checking_fields = [];
         
         $settings = $this->getProjectSettings('');
+        $allow_user_complete = $settings['allow_user_complete'];
+
+        if (!isset($allow_user_complete))
+        {
+            $allow_user_complete = "false";
+        }
+
         
         if ($settings['fields_by_name']==true)
         {
@@ -144,11 +151,16 @@ class FormCompletionCheck extends AbstractExternalModule
                         observer.observe(field, observerOptions);
                     });
 
-                    // check complete when user changes the completion status
-                    var complete_elementName = <?php echo $complete_element_json; ?>;
-                    var completeElement = document.querySelector("[name='" + complete_elementName +"']");
+                    var allow_user_complete = <?php echo json_encode($allow_user_complete); ?>;
+                    
+                    if(allow_user_complete!="true")
+                    {
+                        // check complete when user changes the completion status
+                        var complete_elementName = <?php echo $complete_element_json; ?>;
+                        var completeElement = document.querySelector("[name='" + complete_elementName +"']");
 
-                    completeElement.addEventListener('change',completion_check);
+                        completeElement.addEventListener('change',completion_check);
+                    }
                 }
             });
         </script>

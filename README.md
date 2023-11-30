@@ -22,8 +22,9 @@ Automatically set the form completion status in REDCap Data Entry Forms (not app
    
    Choose how this module can identify your fields carrying completion criteria, either by using the action tag *@COMPLETIONCHECK* (recommended) or a customized prefix for field names.
    <p align="center">
-    <img src="configure.png" alt="configure" width="100%" />
+    <img src="configure.png?cachebust=1" alt="configure" width="100%" />
    </p>
+   You have the option to allow users to manually set the status to Complete or Incomplete, which can then be saved. However, if the page is reopened, refreshed (for example, by clicking 'Save & Stay'), or if there is a change in the display of criteria fields, the automatic status setting will be reapplied.
 
 3. Define your completion criteria fields in the Designer.
    

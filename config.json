@@ -19,19 +19,25 @@
     "project-settings":[
         {
             "key": "descriptive-text",
-            "name": "Criteria for form completion are to be defined in the REDCap Designer, not on this page. Please refer to the documentation for detailed instructions.<br/><B>Fields for completion check are marked by:</B>",
+            "name": "<B>Note:&nbsp;</B>Criteria for form completion are to be defined in the REDCap Designer, not on this page. Please refer to the documentation for detailed instructions.",
+            "type": "descriptive"
+         },
+         {
+            "key": "descriptive-text-2",
+            "name": "<B>Fields for completion check are marked by:</B>",
             "type": "descriptive"
          },
         {
             "key": "fields_by_tag",
             "name": "&nbsp;&nbsp;&bull;&nbsp;action tag '@COMPLETIONCHECK' (recommended)",
-            "type": "checkbox"            
+            "type": "checkbox",  
+            "default":true      
         },
         {
             "key": "fields_by_name",
             "name": "&nbsp;&nbsp;&bull;&nbsp;field name starting with defined prefix",
-            "type": "checkbox"
-
+            "type": "checkbox",
+            "default":false
         },
         {
             "key": "field_prefix",
@@ -43,8 +49,17 @@
                 "field": "fields_by_name",
                 "value": true
             }
+        },
+        {
+            "key": "allow_user_complete",
+            "name": "<B>Allow user set status to Complete/Incomplete</B>",
+            "type": "radio",
+            "choices": [
+                { "value": "true", "name": "<B>Yes</B><Br/>User can set form status as they like regardless the number of errors." },
+                { "value": "false", "name": "<B>No</B><Br/>User can still set status to Unverified, but when they select other options, the status is set by module." }
+            ],
+            "default": "false"   
         }
-
     ]
   
 }
